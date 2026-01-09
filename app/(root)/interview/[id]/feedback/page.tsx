@@ -10,13 +10,13 @@ import { getCurrentUser } from "@/lib/actions/auth.action";
 import { Button } from "@/components/ui/button";
 
 type RouteParams = {
-    params: {
+    params: Promise<{
         id: string;
-    };
+    }>;
 };
 
 const Feedback = async ({ params }: RouteParams) => {
-    const { id } = params;
+    const { id } = await params;
 
     const user = await getCurrentUser();
     if (!user) redirect("/sign-in");
