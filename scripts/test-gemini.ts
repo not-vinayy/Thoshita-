@@ -6,8 +6,7 @@
 import { generateText } from "ai";
 import { google } from "@ai-sdk/google";
 
-// Set the API key
-process.env.GOOGLE_GENERATIVE_AI_API_KEY = "AIzaSyDOY_Vw2lNQbwIgExg7bsqDL3lZqw7PpSc";
+
 
 async function testGeminiAPI() {
     console.log("🔍 Testing Gemini API connection...\n");
